@@ -81,36 +81,6 @@
           }
         }
       },
-      "MediatR/12.2.0": {
-        "type": "package",
-        "dependencies": {
-          "MediatR.Contracts": "[2.0.1, 3.0.0)",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
-        },
-        "compile": {
-          "lib/net6.0/MediatR.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/MediatR.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MediatR.Contracts/2.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/MediatR.Contracts.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/MediatR.Contracts.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.AspNetCore.OpenApi/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -326,7 +296,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -605,6 +575,50 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "Clientes.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FluentValidation": "11.8.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.8.1"
+        },
+        "compile": {
+          "bin/placeholder/Clientes.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clientes.Application.dll": {}
+        }
+      },
+      "Clientes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Clientes.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Clientes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clientes.Domain.dll": {}
+        }
+      },
+      "Clientes.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Clientes.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Clientes.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clientes.Infraestructure.dll": {}
+        }
       }
     }
   },
@@ -699,36 +713,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "MediatR/12.2.0": {
-      "sha512": "8TUFrHapKi6D74PhnSNEguRsH91HNGyP3R4ZQdgDorJgl9Wac5Prh0vA33QfrniAaS6L2xNNhc6vxzg+5AIbwA==",
-      "type": "package",
-      "path": "mediatr/12.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "gradient_128x128.png",
-        "lib/net6.0/MediatR.dll",
-        "lib/net6.0/MediatR.xml",
-        "lib/netstandard2.0/MediatR.dll",
-        "lib/netstandard2.0/MediatR.xml",
-        "mediatr.12.2.0.nupkg.sha512",
-        "mediatr.nuspec"
-      ]
-    },
-    "MediatR.Contracts/2.0.1": {
-      "sha512": "FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
-      "type": "package",
-      "path": "mediatr.contracts/2.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "gradient_128x128.png",
-        "lib/netstandard2.0/MediatR.Contracts.dll",
-        "lib/netstandard2.0/MediatR.Contracts.xml",
-        "mediatr.contracts.2.0.1.nupkg.sha512",
-        "mediatr.contracts.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/7.0.14": {
@@ -1253,16 +1237,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
-      "sha512": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "sha512": "h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
         "buildTransitive/net462/_._",
@@ -1274,13 +1257,11 @@
         "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1751,15 +1732,31 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Clientes.Application/1.0.0": {
+      "type": "project",
+      "path": "../Clientes.Application/Clientes.Application.csproj",
+      "msbuildProject": "../Clientes.Application/Clientes.Application.csproj"
+    },
+    "Clientes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Clientes.Domain/Clientes.Domain.csproj",
+      "msbuildProject": "../Clientes.Domain/Clientes.Domain.csproj"
+    },
+    "Clientes.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../Clientes.Infraestructure/Clientes.Infraestructure.csproj",
+      "msbuildProject": "../Clientes.Infraestructure/Clientes.Infraestructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
+      "Clientes.Domain >= 1.0.0",
+      "Clientes.Infraestructure >= 1.0.0",
       "FluentValidation >= 11.8.1",
       "FluentValidation.AspNetCore >= 11.3.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.8.1",
-      "MediatR >= 12.2.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.14",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
@@ -1773,11 +1770,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Backend\\Clientes.API\\Clientes.API\\Clientes.API.csproj",
+      "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.API\\Clientes.API.csproj",
       "projectName": "Clientes.API",
-      "projectPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Backend\\Clientes.API\\Clientes.API\\Clientes.API.csproj",
+      "projectPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.API\\Clientes.API.csproj",
       "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Backend\\Clientes.API\\Clientes.API\\obj\\",
+      "outputPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1793,7 +1790,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.Domain\\Clientes.Domain.csproj": {
+              "projectPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.Domain\\Clientes.Domain.csproj"
+            },
+            "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.Infraestructure\\Clientes.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.Infraestructure\\Clientes.Infraestructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1821,10 +1825,6 @@
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
             "version": "[11.8.1, )"
-          },
-          "MediatR": {
-            "target": "Package",
-            "version": "[12.2.0, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

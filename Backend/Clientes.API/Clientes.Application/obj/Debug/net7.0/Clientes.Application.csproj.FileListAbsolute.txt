@@ -1,0 +1,13 @@
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\bin\Debug\net7.0\Clientes.Application.deps.json
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\bin\Debug\net7.0\Clientes.Application.dll
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\bin\Debug\net7.0\Clientes.Application.pdb
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.csproj.AssemblyReference.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.AssemblyInfoInputs.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.AssemblyInfo.cs
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.csproj.CoreCompileInputs.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.sourcelink.json
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.dll
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\refint\Clientes.Application.dll
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\Clientes.Application.pdb
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Application\obj\Debug\net7.0\ref\Clientes.Application.dll

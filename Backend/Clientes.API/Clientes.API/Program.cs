@@ -1,10 +1,12 @@
 using AutoMapper;
-using Clientes.API.Aplicacion.Services;
-using Clientes.API.Datos;
-using Clientes.API.Dtos.Requests;
-using Clientes.API.Infraestructura.Repositorios;
-using Clientes.API.Infraestructura.Validadores;
-using Clientes.API.IUtils;
+using Clientes.Application.Dtos.Requests;
+using Clientes.Application.Validadores;
+using Clientes.Domain.IRepositories;
+using Clientes.Domain.IUtils;
+using Clientes.Domain.Services;
+using Clientes.Infraestructure.Datos;
+using Clientes.Infraestructure.Repositorios;
+using Clientes.Infraestructure.Utils;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 

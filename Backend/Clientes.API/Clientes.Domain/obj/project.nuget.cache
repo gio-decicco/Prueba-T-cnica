@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ERmCSUgpNq6pNjTa9psG1kfV4Ns10OCe2Ukw4eojGM3dr/H/Lxg0/59lyRgaXePAxdUntU/1fsK5A6Y6TdvFqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\giova\\OneDrive\\Documentos\\Profesional\\Prueba Técnica Evoltis\\Prueba-T-cnica\\Backend\\Clientes.API\\Clientes.Domain\\Clientes.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\giova\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.1\\fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
