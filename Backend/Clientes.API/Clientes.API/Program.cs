@@ -37,6 +37,16 @@ builder.Services.AddTransient<IValidator<ClienteRequest>, ClienteValidator>();
 builder.Services.AddTransient<IValidator<ContactoRequest>, ContactoValidator>();
 builder.Services.AddTransient<IValidator<DireccionRequest>, DireccionValidator>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,6 +55,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 

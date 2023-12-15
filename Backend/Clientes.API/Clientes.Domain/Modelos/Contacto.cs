@@ -8,7 +8,7 @@ namespace Clientes.Domain.Modelos
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id {  get; set; }
-        public string Tipo { get; set; }
+        public int Tipo { get; set; }
         public string Descripcion { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; } = null!;

@@ -1,3 +1,9 @@
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.AssemblyInfo.cs
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.sourcelink.json
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Infraestructure.deps.json
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Infraestructure.runtimeconfig.json
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Infraestructure.dll
@@ -6,12 +12,6 @@ C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Domain.dll
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Domain.pdb
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\bin\Debug\net7.0\Clientes.Application.pdb
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.AssemblyInfo.cs
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.sourcelink.json
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.csproj.CopyComplete
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\Clientes.Infraestructure.dll
 C:\Users\giova\OneDrive\Documentos\Profesional\Prueba Técnica Evoltis\Prueba-T-cnica\Backend\Clientes.API\Clientes.Infraestructure\obj\Debug\net7.0\refint\Clientes.Infraestructure.dll

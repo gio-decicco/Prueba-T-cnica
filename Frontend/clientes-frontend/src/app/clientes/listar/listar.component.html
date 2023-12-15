@@ -1,0 +1,116 @@
+
+<p-panel header="Filtros">
+    <form [formGroup]="formFiltro">
+        <div class="formgrid grid m-auto">
+            <div class="field col-12 md:col-3">
+                <label for="dni">DNI</label>
+                <input formControlName="dni" type="number" id="dni" name="dni" pInputText class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="nombre">Nombre</label>
+                <input formControlName="nombre" type="text" id="nombre" name="nombre" pInputText class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="apellido">Apellido</label>
+                <input formControlName="apellido" type="text" id="apellido" name="apellido" pInputText class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <p-calendar formControlName="fechaNacimiento" id="fechaNacimiento" name="fechaNacimiento" [showIcon]="true" [style]="{'width': '100%'}"></p-calendar>
+            </div>
+            <div class="field col-12">
+                <p-button label="Buscar" [raised]="true" severity="success" [style]="{'width': '100%', 'margin':'auto'}" (onClick)="getClientesByFiltros()"></p-button>
+            </div>
+        </div>
+    </form>
+</p-panel>
+
+<p-panel header="Clientes" [style]="{'margin-top': '20px'}">
+    <p-table [value]="clientes$ | async" [tableStyle]="{ 'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Dirección</th>
+                <th>Contactos</th>
+                <th>Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cliente>
+            <tr>
+                <td>{{ cliente.dni }}</td>
+                <td>{{ cliente.nombre }}</td>
+                <td>{{ cliente.apellido }}</td>
+                <td>{{ cliente.fechaNacimiento }}</td>
+                <td>
+                    <p-accordion>
+                        <p-accordionTab header="Desplegar">
+                                <ng-template pTemplate="body">
+                                    <tr>
+                                        <th>Calle</th>
+                                        <td>{{ cliente.direccion.calle }}</td>
+                                    </tr>
+                                    <tr>
+                                        <p-divider></p-divider>
+                                    </tr>
+                                    <tr>
+                                        <th>Nro. Calle</th>
+                                        <td>{{ cliente.direccion.nroCalle }}</td>
+                                    </tr>
+                                    <tr>
+                                        <p-divider></p-divider>
+                                    </tr>
+                                    <tr>
+                                        <th>Ciudad</th>
+                                        <td>{{ cliente.direccion.ciudad }}</td>
+                                    </tr>
+                                    <tr>
+                                        <p-divider></p-divider>
+                                    </tr>
+                                    <tr>
+                                        <th>Prov.</th>
+                                        <td>{{ cliente.direccion.provincia }}</td>
+                                    </tr>
+                                    <tr>
+                                        <p-divider></p-divider>
+                                    </tr>
+                                    <tr>
+                                        <th>Pais</th>
+                                        <td>{{ cliente.direccion.pais }}</td>
+                                    </tr>
+                                </ng-template>
+                        </p-accordionTab>
+                    </p-accordion>
+                </td>
+                <td>
+                    <p-accordion>
+                        <p-accordionTab header="Desplegar">
+                            <p-table [value]="cliente.contactos">
+                                <ng-template pTemplate="body" let-contacto>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <td>{{ tiposContacto.get(contacto.tipo) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Desc.</th>
+                                        <td>{{ contacto.descripcion }}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </p-accordionTab>
+                    </p-accordion>
+                </td>
+                <td><p-splitButton 
+                    (onClick)="modificar(cliente.id)" 
+                    label="Modificar"
+                    icon="pi pi-pencil"
+                    [model]="itemsAcciones"
+                    (onDropdownClick)="this.idSeleccionado = cliente.id"
+                    styleClass="p-button-warning"></p-splitButton>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-panel>

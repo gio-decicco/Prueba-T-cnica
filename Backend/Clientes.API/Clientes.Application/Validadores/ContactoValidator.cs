@@ -8,9 +8,9 @@ namespace Clientes.Application.Validadores
         public ContactoValidator() 
         {
             RuleFor(x => x.Tipo)
-                .NotEmpty()
                 .NotNull()
-                .MinimumLength(3);
+                .NotEmpty()
+                .GreaterThan(0);
             RuleFor(x => x.Descripcion)
                 .NotEmpty()
                 .NotNull()

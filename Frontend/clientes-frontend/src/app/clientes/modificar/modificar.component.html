@@ -1,0 +1,123 @@
+<p-panel header="Nuevo Cliente" [style]="{'margin-top': '40px', 'margin-bottom': '20px', 'width': '80%', 'margin':'auto'}">
+  <form [formGroup]="formModificarCliente" (ngSubmit)="onSubmit()">    
+    <!-- DATOS DE CLIENTE -->
+    <div class="formgrid grid m-auto">
+      <div class="field col-12 md:col-2">
+        <label for="dni">DNI</label>
+        <input formControlName="dni" id="dni" type="number" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div style="color: red;" *ngIf="formModificarCliente.get('dni')!.invalid && formModificarCliente.get('dni')!.touched">
+          <p *ngIf="formModificarCliente.get('dni')!.getError('required')">Campo obligatorio</p>
+          <p *ngIf="formModificarCliente.get('dni')!.getError('min')">El valor debe ser mayor a cero</p>
+          <p *ngIf="formModificarCliente.get('dni')!.getError('max')">El valor debe ser menor a 99999999</p>
+        </div>
+      </div>
+      <div class="field col-12 md:col-4">
+          <label for="nombre">Nombre</label>
+          <input formControlName="nombre" id="nombre" type="text" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          <div style="color: red;" *ngIf="formModificarCliente.get('nombre')!.invalid && formModificarCliente.get('nombre')!.touched">
+            <p *ngIf="formModificarCliente.get('nombre')!.getError('required')">Campo obligatorio</p>
+            <p *ngIf="formModificarCliente.get('nombre')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+          </div>
+      </div>
+      <div class="field col-12 md:col-4">
+          <label for="apellido">Apellido</label>
+          <input formControlName="apellido" id="apellido" type="text" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          <div style="color: red;" *ngIf="formModificarCliente.get('apellido')!.invalid && formModificarCliente.get('apellido')!.touched">
+            <p *ngIf="formModificarCliente.get('apellido')!.getError('required')">Campo obligatorio</p>
+            <p *ngIf="formModificarCliente.get('apellido')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+          </div>
+      </div>
+      <div class="field col-12 md:col-2">
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <p-calendar formControlName="fechaNacimiento" id="fechaNacimiento" name="fechaNacimiento" [showIcon]="true" [style]="{'width': '100%'}"></p-calendar>
+        <div style="color: red;" *ngIf="formModificarCliente.get('fechaNacimiento')!.invalid && formModificarCliente.get('fechaNacimiento')!.touched">
+          <p *ngIf="formModificarCliente.get('fechaNacimiento')!.getError('required')">Campo obligatorio</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECCION -->
+    <div class="formgrid grid m-auto" formGroupName="direccion">
+      <p-divider class="field col-12" [style]="{'color': 'Grey'}">Dirección</p-divider>
+      
+      <div class="field col-12 md:col-5">
+          <label for="calle">Calle</label>
+          <input formControlName="calle" id="calle" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+          <div style="color: red;" *ngIf="formModificarCliente.get('direccion.calle')!.invalid && formModificarCliente.get('direccion.calle')!.touched">
+            <p *ngIf="formModificarCliente.get('direccion.calle')!.getError('required')">Campo obligatorio</p>
+            <p *ngIf="formModificarCliente.get('direccion.calle')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+          </div>
+        </div>
+      <div class="field col-12 md:col-1">
+        <label for="numero">Número</label>
+        <input formControlName="nroCalle" id="numero" type="number" rows="4" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+        <div style="color: red;" *ngIf="formModificarCliente.get('direccion.nroCalle')!.invalid && formModificarCliente.get('direccion.nroCalle')!.touched">
+          <p *ngIf="formModificarCliente.get('direccion.nroCalle')!.getError('required')">Campo obligatorio</p>
+          <p *ngIf="formModificarCliente.get('direccion.nroCalle')!.getError('min')">Debe ser mayor a 0</p>
+          <p *ngIf="formModificarCliente.get('direccion.nroCalle')!.getError('max')">El número es muy alto</p>
+        </div>
+      </div>
+      <div class="field col-12 md:col-2">
+        <label for="ciudad">Ciudad</label>
+        <input formControlName="ciudad" id="ciudad" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+        <div style="color: red;" *ngIf="formModificarCliente.get('direccion.ciudad')!.invalid && formModificarCliente.get('direccion.ciudad')!.touched">
+          <p *ngIf="formModificarCliente.get('direccion.ciudad')!.getError('required')">Campo obligatorio</p>
+          <p *ngIf="formModificarCliente.get('direccion.ciudad')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+        </div>
+      </div>
+      <div class="field col-12 md:col-2">
+        <label for="provincia">Provincia</label>  
+        <input formControlName="provincia" id="provincia" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+        <div style="color: red;" *ngIf="formModificarCliente.get('direccion.provincia')!.invalid && formModificarCliente.get('direccion.provincia')!.touched">
+          <p *ngIf="formModificarCliente.get('direccion.provincia')!.getError('required')">Campo obligatorio</p>
+          <p *ngIf="formModificarCliente.get('direccion.provincia')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+        </div>
+      </div>
+      <div class="field col-12 md:col-2">
+        <label for="pais">País</label>
+        <input formControlName="pais" id="pais" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+        <div style="color: red;" *ngIf="formModificarCliente.get('direccion.pais')!.invalid && formModificarCliente.get('direccion.pais')!.touched">
+          <p *ngIf="formModificarCliente.get('direccion.pais')!.getError('required')">Campo obligatorio</p>
+          <p *ngIf="formModificarCliente.get('direccion.pais')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+        </div>
+      </div>
+    </div>  
+      <p-divider class="field col-12" [style]="{'color': 'Grey'}">Contactos</p-divider>
+
+    <div formArrayName="contactos">
+      <div class="formgrid grid m-auto" *ngFor="let contacto of contactos.controls; let i = index" [formGroupName]="i">
+        <div class="field col-12 md:col-2">
+          <label for="tipo">Tipo de Contacto</label>
+            <select formControlName="tipo" name="tipo" id="tipo" class="w-full text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+              <option value="1">Teléfono</option>
+              <option value="2">Email</option>
+            </select>
+          <div style="color: red;" *ngIf="contactos.controls[i].get('tipo')!.invalid && contactos.controls[i].get('tipo')!.touched">
+            <p *ngIf="contactos.controls[i].get('tipo')!.getError('required')">Campo obligatorio</p>
+          </div>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="descripcion">Dato de Contacto</label>
+          <input formControlName="descripcion" name="descripcion" id="descripcion" type="text" class="text-base text-color surface-overlay p-2 border-0 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          <div style="color: red;" *ngIf="contactos.controls[i].get('descripcion')!.invalid && contactos.controls[i].get('descripcion')!.touched">
+            <p *ngIf="contactos.controls[i].get('descripcion')!.getError('required')">Campo obligatorio</p>
+            <p *ngIf="contactos.controls[i].get('descripcion')!.getError('maxlength')">Debe ser menor a 50 caracteres</p>
+          </div>
+        </div>
+          <div class="field col-12 md:col-4">
+            <p-button severity="danger" label="Eliminar" [style]="{'margin-top': '23px', 'width': '100%'}" (onClick)="quitarContacto(i)"></p-button>
+          </div>
+      </div>
+    </div>
+
+    <div class="field col-12">
+      <p-button severity="primary" label="Agregar Contacto" [style]="{'width': '100%'}" (onClick)="agregarContacto()"></p-button>
+    </div>
+
+    <p-divider class="field col-12"></p-divider>
+
+    <div class="field col-12">
+      <p-button severity="success" label="Modificar Cliente" [style]="{'width': '100%'}" type="submit"></p-button>
+    </div>
+  </form>
+</p-panel>

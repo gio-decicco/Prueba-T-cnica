@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Clientes.Application.Dtos.Responses
+﻿namespace Clientes.Application.Dtos.Responses
 {
     public class ContactoResponse
     {
-        public int Id { get; set; }
-        public string Tipo { get; set; }
+        public int Tipo { get; set; }
         public string Descripcion { get; set; }
     }
 }

@@ -81,10 +81,22 @@ namespace Clientes.Infraestructure.Repositorios
         {
             try
             {
-                var clienteModificado = _appDbContext.Clientes.Update(cliente);
+                _appDbContext.Entry(cliente).State = EntityState.Modified;
+
+                var direccion = await _appDbContext.Direcciones.Where(x => x.Id == cliente.Id).FirstOrDefaultAsync();
+
+                _appDbContext.Entry(direccion).State = EntityState.Modified;
+
+                await _appDbContext.Contactos.Where(x => x.ClienteId == cliente.Id).ExecuteDeleteAsync();
+
+                foreach(Contacto contacto in cliente.Contactos)
+                {
+                    _appDbContext.Contactos.Add(contacto);
+                }
+
                 await _appDbContext.SaveChangesAsync();
 
-                return clienteModificado.Entity;
+                return cliente;
             }
             catch
             {
